@@ -23,5 +23,8 @@ module.exports = {
     withDefaults: 'readonly'
   },
   rules: {
+    'vue/multi-word-component-names': ['error', {
+      ignores: ['index']
+    }]
   }
 }
