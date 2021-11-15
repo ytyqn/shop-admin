@@ -1,10 +1,14 @@
-import { createStore } from 'vuex'
+import { InjectionKey } from 'vue'
+import { createStore, Store, useStore as baseUseStore } from 'vuex'
 
 export interface State {
     count: number
-  }
+}
 
-const store = createStore<State>({
+// 定义 injection key
+export const key: InjectionKey<Store<State>> = Symbol('store')
+
+export const store = createStore<State>({
   state () {
     return {
       count: 0
@@ -17,4 +21,7 @@ const store = createStore<State>({
   }
 })
 
-export default store
+// 定义自己的 `useStore` 组合式函数
+export function useStore () {
+  return baseUseStore(key)
+}
