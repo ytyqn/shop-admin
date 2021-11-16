@@ -26,5 +26,13 @@ module.exports = {
     'vue/multi-word-component-names': ['error', {
       ignores: ['index']
     }]
-  }
+  },
+  overrides: [
+    {
+      files: ['src/api/**/*.ts'],
+      rules: {
+        camelcase: 'off'
+      }
+    }
+  ]
 }
