@@ -24,7 +24,7 @@ module.exports = {
   },
   rules: {
     'vue/multi-word-component-names': ['error', {
-      ignores: ['index']
+      ignores: ['index', '404', '403']
     }]
   },
   overrides: [

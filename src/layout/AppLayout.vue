@@ -23,7 +23,7 @@ import AppMenu from './components/AppMenu.vue'
 }
 
 .el-aside {
-  background-color: #d3dce6;
+  background-color: #545c64;
   color: var(--el-text-color-primary);
 }
 
